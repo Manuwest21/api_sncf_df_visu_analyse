@@ -1,4 +1,4 @@
-import streamlit as st
+import streamlt as st
 
 
 st.write("hey")

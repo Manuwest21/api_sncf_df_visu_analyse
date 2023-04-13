@@ -1,9 +1,19 @@
 import requests
 import pandas as pd
 import sqlite3
-gares_parisiennes = ["Paris Gare de Lyon", "Paris Gare du Nord", "Paris Est" , "Paris Saint-Lazare" , "Paris Austerlitz" , 'Paris Bercy']
-annees = ["2022"]
+from datetime import datetime
 
+now = datetime.now()
+print("Date et heure du jour :", now)
+print(now.hour)
+print(now.minute)
+
+
+
+gares_parisiennes = ["Paris Gare de Lyon", "Paris Gare du Nord", "Paris Est" , "Paris Saint-Lazare" , "Paris Austerlitz" , 'Paris Bercy']
+annees = [now.year]
+
+#url_actu+ "%2F"{now.month}"%2F"{now.day}
 # Création d'un DataFrame vide
 df = pd.DataFrame()
 i = 0

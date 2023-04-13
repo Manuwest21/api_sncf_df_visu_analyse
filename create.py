@@ -1,6 +1,7 @@
 import sqlite3
 
-connexion=sqlite3.connect("bddt.db")
+connexion=sqlite3.connect("bdi.db")
+
 curseur=connexion.cursor()
 # curseur.execute("""
 #         UPDATE objets_trouves
@@ -54,6 +55,7 @@ curseur.execute("""
                 """)
 
 connexion.commit()
+connexion.close()
 
 # connexion.commit()
 # # CREATE TABLE objets_trouves_par_semaine (
@@ -62,17 +64,17 @@ connexion.commit()
 # # );
 # def assoc_user_playlist(id_playlist:int, id_utilisateur:int)->None:
 
-connexion=sqlite3.connect('bddt.db')
-curseur= connexion.cursor()
+# connexion=sqlite3.connect('bddt.db')
+# curseur= connexion.cursor()
 
-curseur.execute("""
-                 UPDATE objets_trouves
-                SET date_meteo = meteo.date
-                FROM meteo
-                WHERE objets_trouves.data = meteo.date
+# curseur.execute("""
+#                  UPDATE objets_trouves
+#                 SET date_meteo = meteo.date
+#                 FROM meteo
+#                 WHERE objets_trouves.data = meteo.date
                  
-                        """)
-connexion.commit()
-connexion.close()
-  curseur.execute("""
+#                         """)
+# connexion.commit()
+# connexion.close()
+
                    
